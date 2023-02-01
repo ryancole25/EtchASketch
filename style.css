@@ -1,3 +1,11 @@
+* {
+    font-family: Helvetica;
+}
+
+body{
+    background-color: rgb(124, 181, 209);
+}
+
 h1 {
     text-align: center;
 }
@@ -8,17 +16,26 @@ h1 {
 }
 
 button {
-    margin-right: 50px;
-    margin-left: 50px;
+    background-color: black;
+    color: aliceblue;
+    margin-right: 30px;
+    margin-left: 30px;
     margin-bottom: 20px;
     padding: 10px;
+    border: solid 3px;
+    border-radius: 8px;
+}
+
+button:hover{
+    background-color: rgb(102, 94, 83);
+    ;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     margin: auto;
-    border: solid 2px;
+    border: solid 10px;
     height: 600px;
     width: 600px;
     justify-content: flex-start;
@@ -48,10 +65,11 @@ button {
 }
 
 .slider{
-    appearance: none;
-    background-color: lightgrey;
+    appearance: none; 
+    background-color: white;
     width: 400px;
-    border: solid 1px;
+    border: solid 3px; 
+    margin-right: 10px;
 }
 
 .vertcontainer {
@@ -65,4 +83,8 @@ button {
     padding: 0px;
     font-weight: bold;
     font-size: 40px;
+}
+
+.label {
+    font-size: 23px;
 }

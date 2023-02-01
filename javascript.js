@@ -29,12 +29,11 @@ function clearGrid(){
     return;
 }
 
-
 // Add a hover effect
 function hoverEffect(){
     const pixel = document.querySelectorAll('.pixel');
     pixel.forEach(pix => pix.addEventListener("mouseover", function(){
-    pix.style.backgroundColor = "black";
+    pix.style.backgroundColor = "rgb(0, 0, 0)";
     }));
 }
 
@@ -44,8 +43,10 @@ let slider = document.querySelector(".slider");
 makeGrid(parseInt(slider.value));
 hoverEffect();
 
+// Displays the dimensions of the etch-a-sketch at bottom of page
 let dimensions = document.querySelector(".dimensions");
 dimensions.textContent = `Dimensions: ${slider.value} x ${slider.value}`
+
 
 // Reconfigure grid when adjusting slider
 slider.oninput = function () {
@@ -65,6 +66,13 @@ clearButton.addEventListener('click', function(){
     makeGrid(parseInt(slider.value));
     hoverEffect();
 })
+
+// Draw button that allows you to return to drawing in black again
+const drawButton = document.querySelector('.draw');
+drawButton.addEventListener("click", function(){
+    hoverEffect();
+})
+
 
 // Eraser button that allows you to erase what you have done
 const eraserButton = document.querySelector('.eraser');
@@ -109,6 +117,7 @@ shadingButton.addEventListener('click', function(){
     shadingDraw();
 });
 
+// Gives all pixels a white background initially, then checks the color and darkens slightly after each pass
 function shadingDraw(){
     const pixel = document.querySelectorAll('.pixel');
     // Give every pixel a white background color
@@ -149,3 +158,4 @@ function hexToRgb(hex) {
 function rgbToHex(r, g, b) {
     return "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1);
 }
+
