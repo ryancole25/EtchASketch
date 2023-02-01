@@ -2,6 +2,18 @@ h1 {
     text-align: center;
 }
 
+.horizcontainer{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -20,8 +32,37 @@ h1 {
 
 .pixel {
     flex: 1;
-    /* border: solid 3px white; */
+    /* border: solid 3px black; */
     height: 100 px;
-    background-color: white;
+    background-color: #FFFFFF;
 
+}
+
+.slidecontainer{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    padding: 25px;
+    align-items: center;
+    
+}
+
+.slider{
+    appearance: none;
+    background-color: lightgrey;
+    width: 400px;
+    border: solid 1px;
+}
+
+.vertcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dimensions {
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 40px;
 }

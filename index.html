@@ -9,7 +9,22 @@
 </head>
 <body>
     <h1>ETCH-A-SKETCH</h1>
+
+    </div>
+    <div class=horizcontainer>
+        <button class="clear">Clear</button>
+        <button class="shading">Shading</button>
+        <button class="rainbow">Rainbow</button>
+        <button class="eraser">Eraser</button>
+    </div>
     <div class="container"></div>
+    <div class="vertcontainer">
+        <div class="slidecontainer">
+            <input type="range" class="slider" min="0" max="100" value="4" step="2" name="size">
+            <label for="size">Size of Grid</label>
+        </div>
+        <p class="dimensions"></p>
+    </div>
     <script src="javascript.js"></script>
 </body>
 </html>
